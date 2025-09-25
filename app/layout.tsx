@@ -13,7 +13,7 @@ export const metadata = {
     description: "Wir entwickeln hochwertige Websites, Apps und digitale Produkte – Modio Studio.",
     url: "https://modio.studio",
     siteName: "Modio Studio",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "/logo.svg", width: 1200, height: 630 }],
     locale: "de_DE",
     type: "website"
   },
@@ -21,7 +21,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Modio Studio – Premium Web & App Development",
     description: "Wir entwickeln hochwertige Websites, Apps und digitale Produkte – Modio Studio.",
-    images: ["/og-image.png"]
+    images: ["/logo.svg"]
   }
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
