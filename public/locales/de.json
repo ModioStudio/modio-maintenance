@@ -3,5 +3,10 @@
     "title": "Wir arbeiten an etwas Großartigem",
     "subtitle": "Unsere Website wird gerade gewartet. Vielen Dank für deine Geduld – wir freuen uns darauf, dich bald willkommen zu heißen.",
     "cta": "Zurück zur Startseite"
+  },
+  "hero": {
+    "headline": "Webentwicklung & Design. Effizient. Modern.",
+    "subheadline": "Wir entwickeln hochwertige Websites, Apps und digitale Produkte, die überzeugen.",
+    "cta": "Jetzt Kontakt aufnehmen"
   }
 }
