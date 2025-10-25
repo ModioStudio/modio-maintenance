@@ -44,7 +44,21 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body>{children}
+
+                <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Modio Studio",
+              "url": "https://modio.studio",
+              "logo": "https://modio.studio/logo.png",
+            }),
+          }}
+        />
+      </body>
     </html>
   );
 }
