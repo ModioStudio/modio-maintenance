@@ -22,7 +22,16 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="fixed bottom-6 right-6 bg-gray-900 dark:bg-white text-white dark:text-black px-4 py-2 rounded-full shadow-lg"
+      className="fixed 
+      bottom-6 
+      right-6
+    bg-gray-900 
+    text-white
+      px-4 
+      py-2 
+      rounded-full 
+      shadow-lg 
+      hover:cursor-pointer"
     >
       {isEnglish ? "DE" : "EN"}
     </button>

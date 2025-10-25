@@ -1,12 +1,16 @@
 {
   "maintenance": {
-    "title": "We’ll be back soon",
-    "subtitle": "Our site is currently undergoing maintenance. Thanks for your patience.",
-    "cta": "Back to Home"
+    "title": "We're working on something amazing",
+    "subtitle": "Our website is currently under maintenance. Thank you for your patience – we look forward to welcoming you soon.",
+    "cta": "Back to Homepage"
   },
   "hero": {
-    "headline": "Web Development & Design. Efficient. Modern.",
-    "subheadline": "We create high-quality websites, apps, and digital products that impress.",
-    "cta": "Contact Us Now"
+    "headline": "A Web Studio for",
+    "headlinesub": "Entrepreneurs",
+    "subheadline": "We create brands, websites, and visual identities that leave an impression.",
+    "cta": "Request a Project",
+    "box1": "48-hour Updates",
+    "box2": "Every Detail Crafted with Care",
+    "box3": "Partnership Instead of Assignment"
   }
 }

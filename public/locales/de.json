@@ -5,8 +5,12 @@
     "cta": "Zurück zur Startseite"
   },
   "hero": {
-    "headline": "Webentwicklung & Design. Effizient. Modern.",
-    "subheadline": "Wir entwickeln hochwertige Websites, Apps und digitale Produkte, die überzeugen.",
-    "cta": "Jetzt Kontakt aufnehmen"
+    "headline": "Ein Web Studio für",
+    "headlinesub": "Unternehmer",
+    "subheadline": "Wir gestalten Marken, Websites und visuelle Identitäten, die Eindruck hinterlassen.",
+    "cta": "Projekt Anfragen",
+    "box1": "48 Stunden Updates",
+    "box2": "Jedes Detail mit Sorgfalt gestaltet",
+    "box3": "Patnerschaft Statt Auftrag"
   }
 }

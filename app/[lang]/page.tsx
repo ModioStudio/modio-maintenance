@@ -3,14 +3,20 @@
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "../components/ui/languageSwitcher";
 
+//section imports
+import Hero from "../components/sections/HeroSection";
+
 export default function LandingPage() {
   const t = useTranslations("hero");
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center bg-black text-white px-6">
-      <h1 className="text-5xl font-bold">{t("headline")}</h1>
-      <p className="mt-4 text-lg">{t("subheadline")}</p>
-      <LanguageSwitcher />
-    </section>
+    <main className="md:max-w-[1000px] xl:max-w-[1200px] md:mx-8 lg:mx-auto md:border-l-[0.5px] md:border-r-[0.5px] md:border-neutral-400 px-4 md:px-8 relative">
+
+        <Hero />
+        
+
+
+        <LanguageSwitcher />
+    </main>
   );
 }
