@@ -5,6 +5,7 @@ import LanguageSwitcher from "../components/ui/languageSwitcher";
 
 //section imports
 import Hero from "../components/sections/HeroSection";
+import WorkFlow from "../components/sections/WorkFlowSection";
 
 export default function LandingPage() {
   const t = useTranslations("hero");
@@ -14,6 +15,7 @@ export default function LandingPage() {
 
         <Hero />
         
+        <WorkFlow />
 
 
         <LanguageSwitcher />

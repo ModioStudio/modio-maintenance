@@ -12,5 +12,37 @@
     "box1": "48 Stunden Updates",
     "box2": "Jedes Detail mit Sorgfalt gestaltet",
     "box3": "Patnerschaft Statt Auftrag"
+  },
+  "workflowSection": {
+    "title": {
+      "part1": "Der",
+      "part2": "Einfache",
+      "combined": "Weg, um deine Ideen",
+      "end": "Wirklichkeit werden zu lassen"
+    },
+    "boxes": {
+      "box1": {
+        "title": "Wähle dein Paket",
+        "subtitle": "Finde das passende Angebot für dein Projekt",
+        "options": {
+          "template": "Template Website",
+          "custom": "Custom Website",
+          "design": "Webdesign",
+          "brand": "Brandguidelines"
+        }
+      },
+      "box2": {
+        "title": "Briefing senden",
+        "subtitle": "Teile uns deine Ideen, Ziele und Wünsche mit",
+        "form": {
+          "subjectPlaceholder": "Betreff (z. B. Logo, Webdesign, Website Template)",
+          "sendButton": "Senden"
+        }
+      },
+      "box3": {
+        "title": "Übergabe",
+        "subtitle": "Erhalte dein Design oder deine Website"
+      }
+    }
   }
 }

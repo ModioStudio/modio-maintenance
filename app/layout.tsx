@@ -44,7 +44,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="de">
-      <body>{children}
+      <body className="bg-[#FBFBFB] text-[#0A0A0A]">{children}
 
                 <script
           type="application/ld+json"

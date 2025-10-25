@@ -12,5 +12,36 @@
     "box1": "48-hour Updates",
     "box2": "Every Detail Crafted with Care",
     "box3": "Partnership Instead of Assignment"
+  },
+  "workflowSection": {
+    "title": {
+      "part1": "The",
+      "part2": "Simple",
+      "combined": "Way to turn your ideas into reality"
+    },
+    "boxes": {
+      "box1": {
+        "title": "Choose your package",
+        "subtitle": "Find the right offer for your project",
+        "options": {
+          "template": "Template Website",
+          "custom": "Custom Website",
+          "design": "Web Design",
+          "brand": "Brand Guidelines"
+        }
+      },
+      "box2": {
+        "title": "Send your briefing",
+        "subtitle": "Share your ideas, goals, and wishes with us",
+        "form": {
+          "subjectPlaceholder": "Subject (e.g. Logo, Web Design, Website Template)",
+          "sendButton": "Send"
+        }
+      },
+      "box3": {
+        "title": "Delivery",
+        "subtitle": "Receive your design or website"
+      }
+    }
   }
 }

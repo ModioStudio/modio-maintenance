@@ -17,7 +17,6 @@ export default function Hero() {
         <p className="text-xs">2 Plätze für Q2 Verfügbar</p>
       </motion.div>
 
-      {/* Headlines */}
       <motion.h1
         className="text-5xl md:text-6xl font-bold mt-10 relative z-10 text-[#0A0A0A]"
         initial={{ opacity: 0, y: 30 }}
