@@ -18,7 +18,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.h1
-        className="text-5xl md:text-6xl font-bold mt-10 relative z-10 text-[#0A0A0A]"
+        className="text-5xl md:text-6xl font-bold mt-14 relative z-10 text-[#0A0A0A]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -35,7 +35,7 @@ export default function Hero() {
       </motion.h2>
 
       <motion.h3
-        className="mt-5"
+        className="mt-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -45,7 +45,7 @@ export default function Hero() {
 
       <motion.a
         href="#contact"
-        className="mt-5 inline-block px-4 py-3 bg-[#0A0A0A] text-[#FBFBFB] rounded-sm text-sm shadow-md shadow-black/50"
+        className="mt-10 inline-block px-4 py-3 bg-[#0A0A0A] text-[#FBFBFB] rounded-sm text-sm shadow-md shadow-black/50"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}

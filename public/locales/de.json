@@ -20,28 +20,31 @@
       "combined": "Weg, um deine Ideen",
       "end": "Wirklichkeit werden zu lassen"
     },
-    "boxes": {
-      "box1": {
+  "boxes": {
+      "package": {
         "title": "Wähle dein Paket",
-        "subtitle": "Finde das passende Angebot für dein Projekt",
-        "options": {
-          "template": "Template Website",
-          "custom": "Custom Website",
-          "design": "Webdesign",
-          "brand": "Brandguidelines"
-        }
+        "description": "Finde das passende Angebot für dein Projekt.",
+        "item1": "Template Website", 
+        "item2": "Custom Website", 
+        "item3": "Webdesign", 
+        "item4": "Brandguidelines"
       },
-      "box2": {
-        "title": "Briefing senden",
-        "subtitle": "Teile uns deine Ideen, Ziele und Wünsche mit",
-        "form": {
-          "subjectPlaceholder": "Betreff (z. B. Logo, Webdesign, Website Template)",
-          "sendButton": "Senden"
-        }
+      "briefing": {
+        "title": "Briefing Senden",
+        "description": "Teile uns deine Ideen, Ziele und Wünsche mit.",
+        "messageTitle": "Projektanfrage",
+        "messageBody": "Hallo Modio Studio 👋, ich hätte gerne Unterstützung beim Design meiner neuen Website. Ich wünsche mir ein modernes, klares Design mit Fokus auf Branding und Nutzererlebnis.",
+        "buttonText": "Senden"
       },
-      "box3": {
+      "handover": {
         "title": "Übergabe",
-        "subtitle": "Erhalte dein Design oder deine Website"
+        "description": "Erhalte dein fertiges Design oder deine Website.",
+        "items": [
+          "Template Website",
+          "Custom Website",
+          "Webdesign",
+          "Brandguidelines"
+        ]
       }
     }
   }
