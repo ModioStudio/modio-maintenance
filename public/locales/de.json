@@ -1,51 +1,180 @@
 {
   "maintenance": {
     "title": "Wir arbeiten an etwas Großartigem",
-    "subtitle": "Unsere Website wird gerade gewartet. Vielen Dank für deine Geduld – wir freuen uns darauf, dich bald willkommen zu heißen.",
+    "subtitle": "Unsere Website befindet sich derzeit in Wartung. Vielen Dank für Ihre Geduld – wir freuen uns, Sie bald willkommen zu heißen.",
     "cta": "Zurück zur Startseite"
   },
   "hero": {
-    "headline": "Ein Web Studio für",
+    "seats": "Plätze in",
+    "available": "verfügbar",
+    "headline": "Ein Webstudio für",
     "headlinesub": "Unternehmer",
-    "subheadline": "Wir gestalten Marken, Websites und visuelle Identitäten, die Eindruck hinterlassen.",
-    "cta": "Projekt Anfragen",
-    "box1": "48 Stunden Updates",
-    "box2": "Jedes Detail mit Sorgfalt gestaltet",
-    "box3": "Patnerschaft Statt Auftrag"
+    "subheadline": "Wir erstellen Marken, Websites und visuelle Identitäten, die Eindruck hinterlassen.",
+    "cta": "Projekt anfragen",
+    "box1": "48-Stunden-Updates",
+    "box2": "Jedes Detail sorgfältig gestaltet",
+    "box3": "Partnerschaft statt Auftrag"
   },
   "workflowSection": {
     "title": {
       "part1": "Der",
       "part2": "Einfache",
-      "combined": "Weg, um deine Ideen",
-      "end": "Wirklichkeit werden zu lassen"
+      "combined": "Weg, um Ihre Ideen",
+      "end": "in die Realität umzusetzen"
     },
-  "boxes": {
+    "boxes": {
       "package": {
-        "title": "Wähle dein Paket",
-        "description": "Finde das passende Angebot für dein Projekt.",
-        "item1": "Template Website", 
-        "item2": "Custom Website", 
-        "item3": "Webdesign", 
-        "item4": "Brandguidelines"
+        "title": "Wählen Sie Ihr Paket",
+        "description": "Finden Sie das passende Angebot für Ihr Projekt.",
+        "item1": "Template Website",
+        "item2": "Custom Website",
+        "item3": "Web Design",
+        "item4": "Brand Guidelines"
       },
       "briefing": {
-        "title": "Briefing Senden",
-        "description": "Teile uns deine Ideen, Ziele und Wünsche mit.",
+        "title": "Briefing senden",
+        "description": "Teilen Sie uns Ihre Ideen, Ziele und Wünsche mit.",
         "messageTitle": "Projektanfrage",
-        "messageBody": "Hallo Modio Studio 👋, ich hätte gerne Unterstützung beim Design meiner neuen Website. Ich wünsche mir ein modernes, klares Design mit Fokus auf Branding und Nutzererlebnis.",
+        "messageBody": "Hallo Modio Studio 👋, ich möchte Unterstützung bei der Gestaltung meiner neuen Website. Ich wünsche mir ein modernes, sauberes Design mit Fokus auf Branding und User Experience.",
         "buttonText": "Senden"
       },
       "handover": {
         "title": "Übergabe",
-        "description": "Erhalte dein fertiges Design oder deine Website.",
+        "description": "Erhalten Sie Ihr Projekt inklusiv aller Unterlagen.",
         "items": [
           "Template Website",
           "Custom Website",
-          "Webdesign",
-          "Brandguidelines"
+          "Web Design",
+          "Brand Guidelines"
         ]
       }
     }
-  }
+  },
+  "pricing": {
+    "title": "Transparent. Fair. Keine Überraschungen.",
+    "recommended": "EMPFOHLEN",
+    "enterpriseText": "Benötigen Sie ein vollständiges Designteam für größere oder laufende Projekte?",
+    "enterpriseButton": "Enterprise buchen",
+    "plans": [
+      {
+        "title": "Template Website",
+        "price": "790 €",
+        "description": "Schnell & professionell – perfekt für Einzelunternehmer oder erste Projekte",
+        "features": [
+          "Fertiges Template",
+          "Branding-Anpassung (Farben/Logo)",
+          "Bis zu 3 Seiten",
+          "Responsives Design",
+          "Basis SEO"
+        ],
+        "button": "Jetzt starten",
+        "highlight": false
+      },
+      {
+        "title": "Custom Website",
+        "price": "ab 1.990 €",
+        "description": "Individuelles Design & Struktur – für Marken mit Ambitionen",
+        "features": [
+          "Individuelles Design",
+          "3–6 Seiten",
+          "Volle Kontrolle über Struktur & Inhalte",
+          "Performance-Optimierung",
+          "Erweitertes SEO",
+          "Technische Beratung"
+        ],
+        "button": "Projekt anfragen",
+        "highlight": true
+      }
+    ]
+  },
+  "modules": {
+    "subtitle": "Add-ons & Module",
+    "title": "Erweitern Sie Ihr Paket – flexibel & transparent.",
+    "description": "Ziehen Sie mit der Maus oder wischen Sie – oder lehnen Sie sich zurück und lassen Sie es laufen.",
+    "items": [
+      { "title": "CMS Integration", "price": "+390 €", "desc": "Verwalten Sie Ihre Inhalte selbst – mit einem einfachen CMS." },
+      { "title": "Branding Kit", "price": "+590 €", "desc": "Logo, Farbpalette & Typografie – Ihre Markenidentität in einem." },
+      { "title": "Hosting & Domain", "price": "+250 €/Jahr", "desc": "Schnell, sicher und direkt von uns verwaltet." },
+      { "title": "Wartung & Support", "price": "29 €/Monat", "desc": "Technische Updates & laufender Support inklusive." },
+      { "title": "Copywriting", "price": "+290 €", "desc": "Texte, die verkaufen – klar, SEO-optimiert & authentisch." },
+      { "title": "i18n / Mehrsprachigkeit", "price": "+290 €", "desc": "Professionelle Übersetzung für Ihre Website." }
+    ],
+    "footer": "Alle Preise exkl. MwSt | Kombinierbar mit allen Website-Paketen."
+  },
+  "faq": {
+    "categories": {
+      "payment": {
+        "title": "Zahlung",
+        "faqs": [
+          { "q": "Wie bezahle ich?", "a": "Alle Zahlungen erfolgen per Rechnung nach Auftragserteilung." },
+          { "q": "Kann ich eine Rückerstattung erhalten?", "a": "Wenn Sie sich nach der Zahlung umentscheiden, erstatten wir 60% des Betrags." },
+          { "q": "Ist die Zahlung sicher?", "a": "Ja, alle Rechnungen werden sicher und professionell abgewickelt." }
+        ]
+      },
+      "handover": {
+        "title": "Übergabe",
+        "faqs": [
+          { "q": "Wie läuft die Übergabe ab?", "a": "Nach Abschluss erhalten Sie alle Dateien, Zugangsdaten und Dokumentationen." },
+          { "q": "Kann ich nach der Übergabe noch Änderungen wünschen?", "a": "Ja, kleinere Anpassungen innerhalb von 7 Tagen sind inklusive." },
+          { "q": "Bekomme ich eine Einführung?", "a": "Natürlich — wir bieten ein kurzes Onboarding, um Sie mit allem vertraut zu machen." }
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "faqs": [
+          { "q": "Wann ist euer Support erreichbar?", "a": "Für Enterprise Kunden bieten wir 24/7 Support. Normale Nutzer: werktags 9–17 Uhr." },
+          { "q": "Wie kann ich einen Bug melden?", "a": "Sie können uns per E-Mail kontaktieren – bitte mit Screenshots und Reproduktionsschritten." },
+          { "q": "Gibt es Telefonsupport?", "a": "Telefonischer Support ist nur für Enterprise-Kunden verfügbar." }
+        ]
+      }
+    },
+    "modules": {
+      "items": [
+        { "title": "CMS Integration" },
+        { "title": "Copywriting" },
+        { "title": "Branding & Identät" },
+        { "title": "Mehrsprachigkeit" },
+        { "title": "Wartung & Support" },
+        { "title": "Beratung & Strategie" }
+      ]
+    },
+    "contactSection": {
+      "title": "Haben Sie Fragen oder möchten ein Projekt starten?",
+      "subtitle": "Wählen Sie Ihren Projekttyp, wählen Sie Module und kontaktieren Sie uns direkt.",
+      "ctaTitle": "Kontakt aufnehmen",
+      "ctaSubtitle": "Wir helfen Ihnen, die beste Lösung für Ihre Bedürfnisse zu finden.",
+      "selectModules": "Wählen Sie Module für Ihr Projekt:",
+      "form": {
+        "name": "Ihr Name",
+        "email": "Ihre E-Mail",
+        "message": "Ihre Nachricht",
+        "button": "Nachricht senden"
+      }
+    }
+  },
+  "footer": {
+  "about": {
+    "title": "Über uns",
+    "description": "Wir entwickeln hochwertige Websites, Apps und digitale Produkte – mit Fokus auf Design, Performance & Identität."
+  },
+  "legal": {
+    "title": "Rechtliches",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Modio Studio",
+    "owner": "Jaron Gehrt",
+    "location": "Schalksmühle, Deutschland",
+    "email": "hello@modio.studio"
+  },
+  "social": {
+    "email": "E-Mail",
+    "twitter": "Twitter",
+    "discord": "Discord"
+  },
+  "copyright": "© {year} Modio Studio. Alle Rechte vorbehalten."
+}
 }

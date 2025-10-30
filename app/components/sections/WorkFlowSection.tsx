@@ -3,6 +3,7 @@ import Image from "next/image";
 import {
   Envelope,
   Package,
+  PaintBucket,
   PaperPlaneTilt,
   RocketLaunch,
 } from "phosphor-react";
@@ -28,7 +29,7 @@ export default function Workflow() {
         {t("title.end")}
       </h1>
 
-      <div className="mt-10 flex flex-col md:flex-row justify-center gap-6 px-4">
+      <div className="mt-10 flex flex-col items-center md:flex-row md:justify-center md:items-stretch gap-6 px-4">
         <div className="mt-20 flex flex-col bg-gradient-to-bl from-slate-50 to-zinc-200 items-center rounded-xl w-95 border border-neutral-400">
           {" "}
           <div className="relative flex flex-col mb-6">
@@ -45,7 +46,7 @@ export default function Workflow() {
               </h2>{" "}
               <p className="text-gray-500 mt-1 text-xs -ml-12">
                 {" "}
-                 {t("boxes.package.description")}{" "}
+                {t("boxes.package.description")}{" "}
               </p>{" "}
             </div>{" "}
           </div>{" "}
@@ -57,7 +58,9 @@ export default function Workflow() {
             </div>{" "}
             <div className="p-3 rounded-xl bg-black cursor-pointer transition-colors">
               {" "}
-              <span className="text-[#FBFBFB]">{t("boxes.package.item2")}</span>{" "}
+              <span className="text-[#FBFBFB]">
+                {t("boxes.package.item2")}
+              </span>{" "}
             </div>{" "}
             <div className="p-2 rounded-xl ursor-pointer transition-colors border border-dashed border-neutral-500">
               {" "}
@@ -97,7 +100,7 @@ export default function Workflow() {
 
               <div className="mt-3 bg-gradient-to-bl from-[#1d1d1d] to-[#0000005b] w-full rounded-md p-4 flex flex-col items-center justify-center text-center">
                 <p className="text-[#FBFBFB] text-sm mb-5 text-left">
-                    {t("boxes.briefing.messageBody")}
+                  {t("boxes.briefing.messageBody")}
                 </p>
 
                 <button className="px-6 py-1 text-sm font-medium bg-[#FF9D00] text-[#FBFBFB] rounded-md shadow-sm hover:bg-[#ffb23c] transition-colors">
@@ -107,51 +110,38 @@ export default function Workflow() {
             </div>
           </div>
         </div>
+        
 
-        <div className="mt-20 flex flex-col bg-gradient-to-bl from-slate-50 to-zinc-200 items-center rounded-xl w-95 border border-neutral-400">
-          {" "}
+        <div className="mt-20 flex flex-col items-center rounded-xl w-95 border-1 border-neutral-400 bg-gradient-to-bl from-slate-50 to-zinc-200 shadow-sm">
           <div className="relative flex flex-col mb-6">
-            {" "}
-            <div className="absolute -top-8 -ml-12 flex flex-col items-center justify-center w-12 h-17 bg-neutral-900 rounded-sm shadow-lg shadow-black/36">
-              {" "}
-              <div className="w-3 h-3 bg-[#FBFBFB] rounded-full border border-dashed border-black"></div>{" "}
-              <RocketLaunch size={24} color="#FBFBFB" className="mt-3" />{" "}
-            </div>{" "}
-            <div className="text-left mt-12">
-              {" "}
-              <h2 className="text-2xl font-semibold -ml-12">{t("boxes.handover.title")}</h2>{" "}
-              <p className="text-gray-500 mt-1 text-xs -ml-12">
-                {" "}
-                {t("boxes.handover.description")}{" "}
-              </p>{" "}
-            </div>{" "}
-          </div>{" "}
-          <div className="w-80 overflow-hidden mb-10 flex flex-col gap-3">
-            {" "}
-            <div className="w-80 overflow-hidden mb-10 flex flex-col gap-3 text-xs">
-              {" "}
-              <div className="p-2 rounded-xl cursor-pointer transition-colors border border-dashed border-neutral-500 rounded-t-xl">
-                {" "}
-                <span>Template Website</span>{" "}
-              </div>{" "}
-              <div className="p-3 rounded-xl bg-black cursor-pointer transition-colors">
-                {" "}
-                <span className="text-[#FBFBFB]">Custom Website</span>{" "}
-              </div>{" "}
-              <div className="p-2 rounded-xl ursor-pointer transition-colors border border-dashed border-neutral-500">
-                {" "}
-                <span>Webdesign</span>{" "}
-              </div>{" "}
-              <div className="p-2 rounded-xl cursor-pointer transition-colors border border-dashed border-neutral-500 rounded-b-xl">
-                {" "}
-                 <span>Brandguidelines</span>{" "}
-              </div>{" "}
-            </div>{" "}
+            <div className="absolute -ml-12 -top-8 flex flex-col items-center justify-center w-12 h-17 bg-neutral-900 rounded-sm shadow-lg shadow-black/40">
+              <div className="w-3 h-3 bg-[#FBFBFB] rounded-full border border-dashed border-black"></div>
+              <Envelope size={24} color="#FBFBFB" className="mt-3" />
+            </div>
 
+            <div className="text-left mt-12 -ml-12">
+              <h2 className="text-2xl font-semibold text-neutral-900">
+                {t("boxes.handover.title")}
+              </h2>
+              <p className="text-gray-500 mt-1 text-xs">
+                {t("boxes.handover.description")}
+              </p>
+            </div>
+          </div>
+
+          <div className="w-80 overflow-hidden mb-10 flex flex-col gap-3">
+            <div className="p-3 rounded-xl border border-zinc-700 bg-[#0a0a0a] shadow-md">
+
+
+              <div className="mt-3 bg-gradient-to-bl from-[#1d1d1d] to-[#0000005b] w-full rounded-md p-4 flex flex-col items-center justify-center text-center">
+                  <Package size={196} color="#FBFBFB"/>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
+
+      </div>
       <div
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{

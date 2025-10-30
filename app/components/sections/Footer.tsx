@@ -1,67 +1,94 @@
-import { Mail } from "lucide-react";
+"use client";
+
 import Link from "next/link";
-import { DiscordLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
+import Image from "next/image";
+import { Mail } from "lucide-react";
+import { DiscordLogo, TwitterLogo } from "phosphor-react";
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 export default function Footer() {
-  return (
-    <footer className="bg-[#0a0a0a] text-[#fbfbfb] py-12 px-6 border-t border-neutral-800 mt-60 rounded-t-2xl">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-12">
+  const t = useTranslations("footer");
+  const year = new Date().getFullYear();
 
+  const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
+
+  return (
+    <motion.footer
+      className="bg-[#0a0a0a] text-[#fbfbfb] py-12 px-6 border-t border-neutral-800 mt-60 rounded-t-2xl"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      variants={fadeUp}
+    >
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-12">
         <div className="flex flex-col gap-4 md:w-1/3">
-          <h2 className="text-lg font-semibold tracking-tight">Modio Studio</h2>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/assets/logo.svg"
+              alt="Modio Studio Logo"
+              width={32}
+              height={32}
+              className="rounded-sm"
+            />
+            <h2 className="text-lg font-semibold tracking-tight">{t("contact.name")}</h2>
+          </div>
+
           <p className="text-sm text-neutral-400 leading-relaxed">
-            Wir entwickeln hochwertige Websites, Apps und digitale Produkte – mit Fokus auf Design, Performance & Identität.
+            {t("about.description")}
           </p>
+
           <div className="flex gap-4 mt-2">
-            <Link href="mailto:hello@modio.studio" aria-label="Email">
+            <Link href={`mailto:${t("contact.email")}`} aria-label={t("social.email")}>
               <Mail size={20} className="hover:text-white text-neutral-400 transition" />
             </Link>
-            <Link href="https://www.instagram.com/" aria-label="Instagram">
+            <Link href="https://x.com/modiostudio" aria-label={t("social.twitter")}>
               <TwitterLogo size={20} className="hover:text-white text-neutral-400 transition" />
             </Link>
-            <Link href="https://www.linkedin.com/" aria-label="LinkedIn">
+            <Link href="https://discord.com/" aria-label={t("social.discord")}>
               <DiscordLogo size={20} className="hover:text-white text-neutral-400 transition" />
             </Link>
           </div>
         </div>
 
+        {/* Legal */}
         <div className="flex flex-col md:w-1/3 gap-3">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-300">
-            Rechtliches
+            {t("legal.title")}
           </h3>
-          <Link href="/impressum" className="text-sm text-neutral-400 hover:text-white transition">
-            Impressum
+          <Link href="/imprint" className="text-sm text-neutral-400 hover:text-white transition">
+            {t("legal.impressum")}
           </Link>
-          <Link href="/datenschutz" className="text-sm text-neutral-400 hover:text-white transition">
-            Datenschutz
+          <Link href="/privacy" className="text-sm text-neutral-400 hover:text-white transition">
+            {t("legal.privacy")}
           </Link>
-          <Link href="/agb" className="text-sm text-neutral-400 hover:text-white transition">
-            AGB
+          <Link href="/terms" className="text-sm text-neutral-400 hover:text-white transition">
+            {t("legal.terms")}
           </Link>
         </div>
 
         <div className="flex flex-col md:w-1/3 gap-3">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-300">
-            Kontakt
+            {t("contact.title")}
           </h3>
           <p className="text-sm text-neutral-400">
-            Modio Studio <br />
-            Jaron Gehrt <br />
-            Schalksmühle, Deutschland
+            {t("contact.name")} <br />
+            {t("contact.owner")} <br />
+            {t("contact.location")}
           </p>
           <Link
-            href="mailto:hello@modio.studio"
+            href={`mailto:${t("contact.email")}`}
             className="text-sm text-neutral-400 hover:text-white transition"
           >
-            hello@modio.studio
+            {t("contact.email")}
           </Link>
         </div>
       </div>
 
-      {/* Bottom Line */}
       <div className="border-t border-neutral-800 mt-12 pt-6 text-center text-xs text-neutral-500">
-        © {new Date().getFullYear()} Modio Studio. Alle Rechte vorbehalten.
+        {t("copyright", { year })}
       </div>
-    </footer>
+    </motion.footer>
   );
 }

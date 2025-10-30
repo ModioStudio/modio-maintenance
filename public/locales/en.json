@@ -5,6 +5,8 @@
     "cta": "Back to Homepage"
   },
   "hero": {
+    "seats": "Seats in",
+    "available": "available",
     "headline": "A Web Studio for",
     "headlinesub": "Entrepreneurs",
     "subheadline": "We create brands, websites, and visual identities that leave an impression.",
@@ -24,9 +26,9 @@
       "package": {
         "title": "Choose your package",
         "description": "Find the right offer for your project.",
-        "item1": "Template Website", 
-        "item2": "Custom Website", 
-        "item3": "Web Design", 
+        "item1": "Template Website",
+        "item2": "Custom Website",
+        "item3": "Web Design",
         "item4": "Brand Guidelines"
       },
       "briefing": {
@@ -47,5 +49,132 @@
         ]
       }
     }
+  },
+  "pricing": {
+    "title": "Transparent. Fair. No surprises.",
+    "recommended": "RECOMMENDED",
+    "enterpriseText": "Need a full design team for bigger or ongoing projects?",
+    "enterpriseButton": "Book Enterprise",
+    "plans": [
+      {
+        "title": "Template Website",
+        "price": "790 €",
+        "description": "Quick & professional – perfect for solo entrepreneurs or first projects",
+        "features": [
+          "Ready-made Template",
+          "Branding Adjustment (Colors/Logo)",
+          "Up to 3 pages",
+          "Responsive Design",
+          "Basic SEO"
+        ],
+        "button": "Start Now",
+        "highlight": false
+      },
+      {
+        "title": "Custom Website",
+        "price": "from 1.990 €",
+        "description": "Tailored design & structure – for brands with ambition",
+        "features": [
+          "Custom Design",
+          "3-6 pages",
+          "Full control over structure & content",
+          "Performance Optimization",
+          "Advanced SEO",
+          "Technical Consulting"
+        ],
+        "button": "Request Project",
+        "highlight": true
+      }
+    ]
+  },
+  "modules": {
+    "subtitle": "Add-ons & Modules",
+    "title": "Expand your package – flexible & transparent.",
+    "description": "Drag with the mouse or swipe – or sit back and let it run.",
+    "items": [
+      { "title": "CMS Integration", "price": "+390 €", "desc": "Manage your content yourself – with a simple CMS." },
+      { "title": "Branding Kit", "price": "+590 €", "desc": "Logo, color palette & typography – your brand identity in one." },
+      { "title": "Hosting & Domain", "price": "+250 €/year", "desc": "Fast, secure and directly managed by us." },
+      { "title": "Maintenance & Support", "price": "29 €/month", "desc": "Technical updates & ongoing support included." },
+      { "title": "Copywriting", "price": "+290 €", "desc": "Texts that sell – clear, SEO-optimized & authentic." },
+      { "title": "i18n / Multilingual", "price": "+290 €", "desc": "Professional translation for your website." }
+    ],
+    "footer": "All prices excl. VAT | Combinable with all website packages."
+  },
+"faq": {
+  "categories": {
+    "payment": {
+      "title": "Payment",
+      "faqs": [
+        { "q": "How do I pay?", "a": "All payments are made via invoice after placing your order." },
+        { "q": "Can I get a refund?", "a": "If you change your mind after payment, we refund 60% of the amount." },
+        { "q": "Is my payment secure?", "a": "Yes, all invoices are handled securely and professionally." }
+      ]
+    },
+    "handover": {
+      "title": "Handover",
+      "faqs": [
+        { "q": "How does the handover work?", "a": "After completion, you will receive all files, login data, and documentation." },
+        { "q": "Can I request changes after handover?", "a": "Yes, small adjustments within 7 days are included." },
+        { "q": "Will there be an introduction?", "a": "Of course — we offer a short onboarding to get you familiar with everything." }
+      ]
+    },
+    "support": {
+      "title": "Support",
+      "faqs": [
+        { "q": "When is your support available?", "a": "For Enterprise clients we offer 24/7 support. Normal clients: weekdays 9–17h." },
+        { "q": "How can I report a bug?", "a": "You can contact us via email, including screenshots and reproduction steps." },
+        { "q": "Is phone support available?", "a": "Phone support is only available for enterprise clients." }
+      ]
+    }
+  },
+  "modules": {
+    "items": [
+      { "title": "Hosting & Domain" },
+      { "title": "Multilingual" },
+      { "title": "Branding & Identity" },
+      { "title": "Maintenance & Support" },
+      { "title": "CMS Integration" },
+      { "title": "Copywriting" }
+    ]
+  },
+  "contactSection": {
+    "title": "Have questions or want to start a project?",
+    "subtitle": "Select your project type, choose modules, and contact us directly.",
+    "ctaTitle": "Get in touch",
+    "ctaSubtitle": "We’ll help you find the best solution for your needs.",
+    "selectModules": "Select modules for your project:",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "button": "Send Message"
+    }
   }
+},
+"footer": {
+  "about": {
+    "title": "About",
+    "description": "We develop high-quality websites, apps and digital products – with focus on design, performance & identity."
+  },
+  "legal": {
+    "title": "Legal",
+    "impressum": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms & Conditions"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Modio Studio",
+    "owner": "Jaron Gehrt",
+    "location": "Schalksmühle, Germany",
+    "email": "hello@modio.studio"
+  },
+  "social": {
+    "email": "Email",
+    "twitter": "Twitter",
+    "discord": "Discord"
+  },
+  "copyright": "© {year} Modio Studio. All rights reserved."
+}
 }
