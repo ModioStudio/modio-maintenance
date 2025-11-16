@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { lang } = await params; 
+  const { lang } = params; 
   const locale = lang === "en" ? "en" : "de";
   const mode = process.env.NEXT_PUBLIC_MODE || "live";
 
