@@ -53,44 +53,45 @@
   "pricing": {
     "title": "Transparent. Fair. Keine Überraschungen.",
     "recommended": "EMPFOHLEN",
-    "enterpriseText": "Benötigen Sie ein vollständiges Designteam für größere oder laufende Projekte?",
-    "enterpriseButton": "Enterprise buchen",
+    "enterpriseText": "Benötigen Sie ein vollständiges Designteam für größere oder laufende Projekte? Kontaktieren Sie uns!",
     "plans": [
-      {
-        "title": "Template Website",
-        "price": "790 €",
-        "description": "Schnell & professionell – perfekt für Einzelunternehmer oder erste Projekte",
-        "features": [
-          "Fertiges Template",
-          "Branding-Anpassung (Farben/Logo)",
-          "Bis zu 3 Seiten",
-          "Responsives Design",
-          "Basis SEO"
-        ],
-        "button": "Jetzt starten",
-        "highlight": false
-      },
-      {
-        "title": "Custom Website",
-        "price": "ab 1.990 €",
-        "description": "Individuelles Design & Struktur – für Marken mit Ambitionen",
-        "features": [
-          "Individuelles Design",
-          "3–6 Seiten",
-          "Volle Kontrolle über Struktur & Inhalte",
-          "Performance-Optimierung",
-          "Erweitertes SEO",
-          "Technische Beratung"
-        ],
-        "button": "Projekt anfragen",
-        "highlight": true
-      }
+    {
+    "title": "Einfache Webpräsenz",
+    "price": "ab 890 €",
+    "description": "Schnell umgesetzt, modern und ideal für Solo-Selbstständige, die professionell online starten wollen.",
+    "features": [
+        "Professionelles Template als Basis",
+        "Branding-Anpassung (Farben, Logo, Typografie)",
+        "Bis zu 3 Seiten",
+        "Responsives Design für alle Geräte",
+        "Optimierte Ladezeiten",
+        "Basis-SEO & klare Seitenstruktur"
+    ],
+    "button": "Jetzt starten",
+    "highlight": false
+    }
+    ,
+    {
+    "title": "Individuelle Webpräsenz",
+    "price": "ab 2.500 €",
+     "description": "Individuelles High-End Webdesign für Unternehmen, die online wachsen wollen – Preis abhängig von Umfang & Funktionalität.",
+    "features": [
+        "Custom UI/UX Design (Figma)",
+        "5–12 Seiten – flexibel nach Projektumfang",
+        "Skalierbare Content-Struktur",
+        "SEO & Performance-Optimierung (Core Web Vitals)",
+        "Technische Beratung & Prozessbegleitung",
+        "Individuelle Integrationen (APIs, Formulare, CRM)"
+    ],
+    "button": "Projekt anfragen",
+    "highlight": true
+    }
     ]
   },
   "modules": {
     "subtitle": "Add-ons & Module",
     "title": "Erweitern Sie Ihr Paket – flexibel & transparent.",
-    "description": "Ziehen Sie mit der Maus oder wischen Sie – oder lehnen Sie sich zurück und lassen Sie es laufen.",
+    "description": "Wischen oder automatisch abspielen lassen – Sie entscheiden.",
     "items": [
       { "title": "CMS Integration", "price": "+390 €", "desc": "Verwalten Sie Ihre Inhalte selbst – mit einem einfachen CMS." },
       { "title": "Branding Kit", "price": "+590 €", "desc": "Logo, Farbpalette & Typografie – Ihre Markenidentität in einem." },
@@ -139,18 +140,21 @@
       ]
     },
     "contactSection": {
-      "title": "Haben Sie Fragen oder möchten ein Projekt starten?",
-      "subtitle": "Wählen Sie Ihren Projekttyp, wählen Sie Module und kontaktieren Sie uns direkt.",
-      "ctaTitle": "Kontakt aufnehmen",
-      "ctaSubtitle": "Wir helfen Ihnen, die beste Lösung für Ihre Bedürfnisse zu finden.",
-      "selectModules": "Wählen Sie Module für Ihr Projekt:",
-      "form": {
+    "title": "Sie haben Fragen oder möchten ein Projekt starten?",
+    "subtitle": "Wählen Sie Ihren Projekttyp, stellen Sie Ihre Module zusammen und kontaktieren Sie uns. Sie erhalten eine Bestätigung, sobald wir Ihre Nachricht erhalten haben.",
+    "ctaTitle": "Kontakt aufnehmen",
+    "ctaSubtitle": "Wir helfen Ihnen, die beste Lösung für Ihre Bedürfnisse zu finden. Ihre Anfrage wird direkt an unser Team gesendet.",
+    "selectModules": "Wählen Sie Module für Ihr Projekt:",
+    "form": {
         "name": "Ihr Name",
         "email": "Ihre E-Mail",
         "message": "Ihre Nachricht",
-        "button": "Nachricht senden"
-      }
+        "button": "Nachricht senden",
+        "sending": "Sende Nachricht...",
+        "success": "Ihre Nachricht wurde erfolgreich gesendet. Sie erhalten in Kürze eine Bestätigung per E-Mail.",
+        "error": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
     }
+        }
   },
   "footer": {
   "about": {

@@ -45,5 +45,6 @@ export default function ModulesSection() {
         {t("footer")}
       </p>
     </section>
+
   );
 }

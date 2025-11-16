@@ -101,9 +101,6 @@ export default function PricingSection() {
         transition={{ duration: 0.4, delay: 0.4 }}
       >
         <p className="text-gray-700 text-lg mb-4">{t("enterpriseText")}</p>
-        <button className="px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-900 transition">
-          {t("enterpriseButton")}
-        </button>
       </motion.div>
 
       <div
