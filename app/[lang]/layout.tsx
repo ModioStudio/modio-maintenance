@@ -4,7 +4,7 @@ import MaintenancePage from "./maintenance/page";
 
 interface Props {
   children: React.ReactNode;
-  params: { lang: string };
+  params?: { [key: string]: any }; 
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
