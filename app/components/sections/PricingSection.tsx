@@ -1,9 +1,15 @@
 import { CheckCircle } from "phosphor-react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 export default function PricingSection() {
   const t = useTranslations("pricing");
+  const refFaq = useRef<HTMLElement>(null);
+
+  const scrollToFaq = () => {
+    refFaq.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const plans = [
     {
@@ -16,6 +22,7 @@ export default function PricingSection() {
         t("plans.0.features.2"),
         t("plans.0.features.3"),
         t("plans.0.features.4"),
+        t("plans.0.features.5"),
       ],
       button: t("plans.0.button"),
       highlight: false,
@@ -36,6 +43,7 @@ export default function PricingSection() {
       highlight: true,
     },
   ];
+
 
   return (
     <div className="py-8 lg:py-16 text-center relative mt-15">
@@ -80,15 +88,17 @@ export default function PricingSection() {
               ))}
             </ul>
 
-            <button
-              className={`mt-auto py-2 px-4 rounded-md font-medium hover:cursor-pointer ${
-                plan.highlight
-                  ? "bg-black text-white"
-                  : "bg-white text-black border border-black hover:bg-black hover:text-white transition-colors"
-              }`}
-            >
-              {plan.button}
-            </button>
+        <a href="#contact">
+        <button
+            className={`mt-auto mb-2 py-2 px-4 rounded-md font-medium hover:cursor-pointer ${
+            plan.highlight
+                ? "bg-black text-white"
+                : "bg-white text-black border border-black hover:bg-black hover:text-white transition-colors"
+            }`}
+        >
+            {plan.button}
+        </button>
+        </a>
           </motion.div>
         ))}
       </div>

@@ -121,7 +121,7 @@ const handleSubmit = async (e: FormEvent) => {
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 py-16">
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12" id="contact">
         <h1 className="text-4xl font-bold text-foreground mt-3">{t("contactSection.title")}</h1>
         <p className="text-muted-foreground mt-3 max-w-xl mx-auto">{t("contactSection.subtitle")}</p>
       </div>

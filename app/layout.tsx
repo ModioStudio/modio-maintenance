@@ -41,12 +41,14 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <html lang="de">
-      <body className="bg-[#FBFBFB] text-[#0A0A0A]">{children}
+export default function RootLayout({ children, params }: RootLayoutProps & { params?: { lang: string } }) {
+  const lang = params?.lang === "en" ? "en" : "de";
 
-                <script
+  return (
+    <html lang={lang}>
+      <body className="bg-[#FBFBFB] text-[#0A0A0A]">
+        {children}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -62,3 +64,4 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   );
 }
+
