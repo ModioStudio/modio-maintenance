@@ -12,7 +12,6 @@ export default function ImpressumPage() {
           <p className="font-medium text-lg">Jaron Gehrt</p>
           <p>Modio Studio (Einzelunternehmer)</p>
           <p>Dahlhauser Kopf 7</p>
-          <p>Gebäude 44</p>
           <p>58579 Schalksmühle</p>
         </div>
 
