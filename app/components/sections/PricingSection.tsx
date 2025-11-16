@@ -1,15 +1,9 @@
 import { CheckCircle } from "phosphor-react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 export default function PricingSection() {
   const t = useTranslations("pricing");
-  const refFaq = useRef<HTMLElement>(null);
-
-  const scrollToFaq = () => {
-    refFaq.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const plans = [
     {

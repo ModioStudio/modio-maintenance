@@ -1,4 +1,3 @@
-import Footer from "../components/sections/Footer";
 import BackToHomeButton from "../components/ui/homeButton";
 
 export default function ImpressumPage() {

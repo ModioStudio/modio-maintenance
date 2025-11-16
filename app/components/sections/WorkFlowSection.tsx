@@ -3,9 +3,7 @@ import Image from "next/image";
 import {
   Envelope,
   Package,
-  PaintBucket,
   PaperPlaneTilt,
-  RocketLaunch,
 } from "phosphor-react";
 
 export default function Workflow() {
