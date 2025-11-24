@@ -6,13 +6,14 @@ const resend = new Resend(process.env.RESEND_API_KEY!);
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, message, projectType, modules } = body;
+    const { company, name, email, message, projectType, modules } = body;
 
     const modulesList = modules?.length
       ? `<ul>${modules.map((m: string) => `<li>${m}</li>`).join("")}</ul>`
       : "<p>Keine Module ausgewählt</p>";
 
     const htmlLead = `
+      <p><strong>Firma:</strong> ${company}</p>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Projekttyp:</strong> ${projectType}</p>
@@ -28,21 +29,32 @@ export async function POST(req: NextRequest) {
     });
 
     await resend.emails.send({
-    from: "hello@modio.studio",
+    from: "no-replay@modio.studio",
     to: email,
     subject: "Ihre Projektanfrage ist eingegangen",
     html: `
-        <p>Hallo ${name},</p>
-        <p>vielen Dank für Ihre Anfrage bei Modio Studio!</p>
-        <p>Wir haben Ihre Angaben zu Ihrem Projekt erhalten und prüfen diese zeitnah. Einer unserer Berater wird sich innerhalb der nächsten 24 Stunden bei Ihnen melden.</p>
-        <p>Ihr ausgewählter Projekttyp: <strong>${projectType}</strong></p>
-        <p>Ihre ausgewählten Module: ${
-        modules?.length
-            ? `<ul>${modules.map((m: string) => `<li>${m}</li>`).join("")}</ul>`
-            : "<em>Keine Module ausgewählt</em>"
-        }</p>
-        <p>Vielen Dank für Ihr Vertrauen – wir freuen uns auf die Zusammenarbeit!</p>
-        <p>Beste Grüße,<br/>Ihr Modio Studio Team</p>
+
+    ${ company ? `<p><strong>Firma:</strong> ${company}</p>` : "" }
+
+    <p>Hallo ${name},</p>
+    <p>vielen Dank für Ihre Anfrage bei Modio Studio!</p>
+    <p>Wir haben Ihre Angaben zu Ihrem Projekt erhalten und prüfen diese zeitnah. Einer unserer Berater wird sich innerhalb der nächsten 24 Stunden bei Ihnen melden.</p>
+
+    <p><strong>Projekttyp:</strong> ${projectType}</p>
+    <p><strong>Ausgewählte Module:</strong> ${
+    modules?.length
+        ? `<ul>${modules.map((m: string) => `<li>${m}</li>`).join("")}</ul>`
+        : "<em>Keine Module ausgewählt</em>"
+    }</p>
+
+    <p>Vielen Dank für Ihr Vertrauen – wir freuen uns auf die Zusammenarbeit!</p>
+    <p>Beste Grüße,<br/>Ihr Modio Studio Team</p>
+
+    <address>
+    <p>Email: <a href="mailto:hello@modio.studio">hello@modio.studio</a></p>
+    <p>Telefon: +49 175 6903615</p>
+    <p>Web: <a href="https://www.modio.studio">www.modio.studio</a></p>
+    </address>
     `,
     });
 
