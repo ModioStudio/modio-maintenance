@@ -35,20 +35,7 @@ const TEXT = {
       ] 
     },
   ],
-  packages: ["Starter", "Business", "Enterprise"],
-  modules: [
-    { title: "Brand Assets & Print Design", price: "ab 250 €" },
-    { title: "Logo Design", price: "ab 400 €" },
-    { title: "Branding Mini-Guidelines", price: "ab 200 €" },
-    { title: "Starter CMS Upgrade", price: "ab 400 €" },
-    { title: "Conversion Copywriting", price: "ab 200 €" },
-    { title: "Mehrsprachigkeit (i18n)", price: "ab 300 €" },
-    { title: "Analytics & Tracking Setup", price: "ab 150 €" },
-    { title: "SEO Upgrade", price: "ab 400 €" },
-    { title: "Domain & Hosting Paket", price: "ab 29 € / Monat" },
-    { title: "Wartungs Paket", price: "20 € / Monat" },
-    { title: "Webshop", price: "ab 800 €" },
-  ],
+  packages: ["Starter", "Business", "Enterprise"]
 };
 
 export default TEXT;

@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@radix-ui/react-accordion";
+
 import {
   Select,
   SelectTrigger,
@@ -17,34 +18,20 @@ import {
   SelectGroup,
 } from "../ui/select";
 
-
 import TEXT from "@/lib/faq";
 
 export default function FAQWithContact() {
   const categories = TEXT.categories;
   const [activeCategory, setActiveCategory] = useState(categories[0].id);
+
   const [selectedPackage, setSelectedPackage] = useState<string>("");
-  const [selectedModules, setSelectedModules] = useState<string[]>([]);
   const [company, setCompany] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState<boolean | null>(null);
-
-  const toggleModule = (mod: string) => {
-    setSelectedModules((prev) =>
-      prev.includes(mod) ? prev.filter((m) => m !== mod) : [...prev, mod]
-    );
-  };
-
-  const visibleModules = TEXT.modules.filter((mod) => {
-    if (selectedPackage === "Starter") {
-      return mod.title !== "Analytics & Tracking Setup" && mod.title !== "Webshop";
-    } else {
-      return mod.title !== "Starter CMS Upgrade";
-    }
-  });
 
   const current = categories.find((cat) => cat.id === activeCategory);
 
@@ -57,7 +44,13 @@ export default function FAQWithContact() {
       const res = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ company, name, email, message, projectType: selectedPackage, modules: selectedModules }),
+        body: JSON.stringify({
+          company,
+          name,
+          email,
+          message,
+          projectType: selectedPackage,
+        }),
       });
 
       if (!res.ok) throw new Error(`Serverfehler: ${res.status}`);
@@ -65,7 +58,11 @@ export default function FAQWithContact() {
 
       if (data.success) {
         setSuccess(true);
-        setCompany(""); setName(""); setEmail(""); setMessage(""); setSelectedModules([]); setSelectedPackage("Starter");
+        setCompany("");
+        setName("");
+        setEmail("");
+        setMessage("");
+        setSelectedPackage("");
       } else {
         setSuccess(false);
       }
@@ -78,14 +75,16 @@ export default function FAQWithContact() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 py-16">
-      
       <div className="text-center mb-12" id="contact">
-        <h1 className="text-4xl font-bold text-foreground mt-3">{TEXT.contactSection.title}</h1>
-        <p className="text-muted-foreground mt-3 max-w-xl mx-auto">{TEXT.contactSection.ctaSubtitle}</p>
+        <h1 className="text-4xl font-bold text-foreground mt-3">
+          {TEXT.contactSection.title}
+        </h1>
+        <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
+          {TEXT.contactSection.ctaSubtitle}
+        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-       
         <div>
           <div className="flex flex-wrap gap-3 mb-8">
             {categories.map((cat) => (
@@ -103,28 +102,39 @@ export default function FAQWithContact() {
             ))}
           </div>
 
-          <Accordion type="single" defaultValue="item-1" collapsible>
+          <Accordion type="single" defaultValue="item-0" collapsible>
             {current?.faqs.map((faq, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-b border-border py-3">
-                <AccordionTrigger className="text-left text-base font-medium text-foreground">{faq.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-sm mt-2">{faq.a}</AccordionContent>
+              <AccordionItem
+                key={i}
+                value={`item-${i}`}
+                className="border-b border-border py-3"
+              >
+                <AccordionTrigger className="text-left text-base font-medium text-foreground">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-sm mt-2">
+                  {faq.a}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
 
-
+        {/* Right: Contact Form */}
         <div className="bg-muted/60 p-8 rounded-2xl shadow-sm flex flex-col justify-center">
           <h2 className="text-2xl font-semibold mb-3 text-foreground text-center">
             {TEXT.contactSection.ctaTitle}
           </h2>
-          <p className="text-muted-foreground mb-6 text-center">{TEXT.contactSection.ctaSubtitle}</p>
+          <p className="text-muted-foreground mb-6 text-center">
+            {TEXT.contactSection.ctaSubtitle}
+          </p>
 
+          {/* Package Selection */}
           <div className="mb-6">
-            <Select value={selectedPackage} onValueChange={(val) => {
-                setSelectedPackage(val);
-                setSelectedModules([]);
-            }}>
+            <Select
+              value={selectedPackage}
+              onValueChange={(val) => setSelectedPackage(val)}
+            >
               <SelectTrigger className="w-full">
                 <SelectValue placeholder="Wählen Sie ein Paket" />
               </SelectTrigger>
@@ -140,44 +150,8 @@ export default function FAQWithContact() {
             </Select>
           </div>
 
-          <div className="mb-2">
-            <Select value="" onValueChange={(val) => toggleModule(val)}>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Wählen Sie ihre Module" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  {visibleModules.map((mod) => (
-                    <SelectItem key={mod.title} value={mod.title}>
-                      {mod.title} ({mod.price})
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
-
-          {selectedModules.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-2">
-              {selectedModules.map((mod) => (
-                <div
-                  key={mod}
-                  className="bg-primary text-white px-3 py-1 rounded-full flex items-center gap-1"
-                >
-                  {mod}
-                  <span
-                    onClick={() => toggleModule(mod)}
-                    className="cursor-pointer font-bold"
-                  >
-                    ×
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
-
-
-          <form className="flex flex-col gap-4 mt-6" onSubmit={handleSubmit} id="contact">
+          {/* Contact Form */}
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder={TEXT.contactSection.form.company}
@@ -185,6 +159,7 @@ export default function FAQWithContact() {
               onChange={(e) => setCompany(e.target.value)}
               className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             />
+
             <input
               type="text"
               placeholder={TEXT.contactSection.form.name}
@@ -193,6 +168,7 @@ export default function FAQWithContact() {
               className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
+
             <input
               type="email"
               placeholder={TEXT.contactSection.form.email}
@@ -201,6 +177,7 @@ export default function FAQWithContact() {
               className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
+
             <textarea
               placeholder={TEXT.contactSection.form.message}
               value={message}
@@ -208,14 +185,22 @@ export default function FAQWithContact() {
               className="w-full rounded-md border border-dashed border-neutral-500 bg-background px-3 py-2 text-sm h-28 resize-none focus:outline-none focus:ring-1 focus:ring-primary"
               required
             />
+
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? TEXT.contactSection.form.sending : TEXT.contactSection.form.button}
+              {loading
+                ? TEXT.contactSection.form.sending
+                : TEXT.contactSection.form.button}
             </Button>
+
             {success === true && (
-              <p className="text-green-600 text-sm mt-2 text-center">{TEXT.contactSection.form.success}</p>
+              <p className="text-green-600 text-sm mt-2 text-center">
+                {TEXT.contactSection.form.success}
+              </p>
             )}
             {success === false && (
-              <p className="text-red-600 text-sm mt-2 text-center">{TEXT.contactSection.form.error}</p>
+              <p className="text-red-600 text-sm mt-2 text-center">
+                {TEXT.contactSection.form.error}
+              </p>
             )}
           </form>
         </div>

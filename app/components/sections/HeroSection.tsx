@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useMemo } from "react";
 
 import TEXT from "@/lib/hero";
+import { Tagline } from "../ui/tagline";
 
 export default function Hero() {
   const quarter = useMemo(() => Math.floor(new Date().getMonth() / 3) + 1, []);
