@@ -19,7 +19,7 @@ const TEXT = {
 
   briefingBox: {
     title: "Briefing",
-    description: "Teilen Sie uns Ihre Ideen, Ziele & Wünsche mit.",
+    description: "Wir möchten Sie und Ihre Wünsche kennenlernen.",
     messageTitle: "Ihre Anforderungen",
     messageBody:
       "Teilen Sie uns Ihre Wünsche, Ziele und Inhalte mit, wir erledigen den Rest.",
