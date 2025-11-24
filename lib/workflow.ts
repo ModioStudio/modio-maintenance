@@ -22,7 +22,7 @@ const TEXT = {
     description: "Teilen Sie uns Ihre Ideen, Ziele & Wünsche mit.",
     messageTitle: "Ihre Anforderungen",
     messageBody:
-      "Teilen Sie mir Ihre Wünsche, Ziele und Inhalte mit – in einfacher, verständlicher Form. Ich strukturiere alles für Sie.",
+      "Teilen Sie uns Ihre Wünsche, Ziele und Inhalte mit, wir erledigen den Rest.",
   },
 
   handoverBox: {

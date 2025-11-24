@@ -1,5 +1,4 @@
 import { Home, Briefcase, Building2, ArrowUpRight } from "lucide-react";
-import { Button } from "@/app/components/ui/button";
 import { Card } from "@/app/components/ui/card";
 
 export default function PricingPage() {
