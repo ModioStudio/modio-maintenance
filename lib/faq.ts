@@ -15,24 +15,42 @@ const TEXT = {
       error: "Hoppla, etwas ist schiefgelaufen. Bitte versuche es erneut.",
     },
   },
-  categories: [
-    { id: "payment", title: "Zahlung & Preise", faqs: [
-        { q: "Welche Zahlungsmöglichkeiten gibt es?", a: "Wir akzeptieren Überweisung, PayPal und Kreditkarte." },
+ categories: [
+    { 
+      id: "general", 
+      title: "Allgemein & Preise", 
+      faqs: [
+        { q: "Welche Zahlungsmöglichkeiten gibt es?", a: "Wir akzeptieren Überweisung und PayPal." },
         { q: "Kann ich eine Rechnung bekommen?", a: "Ja, für jedes Projekt stellen wir eine Rechnung aus." },
-        { q: "Gibt es Rabatte für Startups?", a: "Ja, kontaktiere uns gerne für ein individuelles Angebot." },
+        { q: "Wo sitzt Modio Studio?", a: "Wir sind in Schalksmühle, Deutschland ansässig." },
       ] 
     },
-    { id: "handover", title: "Projektabwicklung", faqs: [
+    { 
+      id: "project", 
+      title: "Projekt & Support", 
+      faqs: [
         { q: "Wie lange dauert ein Projekt?", a: "Die Dauer hängt vom Umfang ab, meist 2-6 Wochen." },
         { q: "Wie bekomme ich die fertigen Dateien?", a: "Wir liefern alle Dateien digital per Link oder E-Mail." },
-        { q: "Kann ich Änderungen nach Lieferung anfragen?", a: "Ja, wir bieten Nachbesserungen innerhalb von 14 Tagen an." },
+        { q: "Bietet ihr Support nach Launch?", a: "Ja, wir haben optionale Supportpakete." },
       ] 
     },
-    { id: "support", title: "Support & Betreuung", faqs: [
-        { q: "Bietet ihr Support nach Launch?", a: "Ja, wir haben optionale Supportpakete." },
-        { q: "Kann ich selbst Änderungen vornehmen?", a: "Wenn ein CMS integriert ist, ja. Wir schulen dich dafür." },
-        { q: "Gibt es Schulungen?", a: "Ja, auf Wunsch führen wir kurze Trainingssessions durch." },
-      ] 
+    { 
+        id: "abo", 
+        title: "Abo", 
+        faqs: [
+        { 
+            q: "Wie funktioniert das Starter Abo?", 
+            a: "Das Starter Abo umfasst monatlich 4 Social Media Posts und 1–2 kleine Anpassungen an Ihrer Website."
+        },
+        { 
+            q: "Was bietet das Business Plus Abo?", 
+            a: "Das Business Plus Abo umfasst alle Leistungen des Business Abos plus 6–10 Änderungen pro Monat, Analytics & Performance Checks sowie Funnel-Optimierung."
+        },
+        {
+        q: "Kann ich mein Abo jederzeit kündigen?",
+        a: "Nein, alle Abos sind an eine Mindestlaufzeit von einem Jahr gebunden und jährlich kündbar."
+        }
+        ] 
     },
   ],
   packages: ["Starter", "Business", "Enterprise"]

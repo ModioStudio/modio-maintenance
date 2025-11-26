@@ -1,7 +1,3 @@
-// =========================
-// FILE: src/app/api/contact/route.ts
-// =========================
-
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import NoReplayEmail from "@/emails/noReplay";
@@ -43,7 +39,7 @@ export async function POST(req: NextRequest) {
         Hallo ${name},
 
         vielen Dank für Ihre Anfrage bei Modio Studio! 
-        Wir haben Ihre Angaben erhalten und kümmern uns direkt darum. 
+        Wir haben Ihre Angaben erhalten und kümmern uns direkt um Ihr Anliegen.
         Innerhalb der nächsten 24 Stunden wird sich einer unserer Berater persönlich bei Ihnen melden.
 
         --- Ihre Anfrage im Überblick ---

@@ -52,7 +52,7 @@ export default function NoReplayEmail({ name, projectType }: Props) {
 
         <Text className="text-gray-900 text-base mb-6">
         vielen Dank für Ihre Anfrage bei Modio Studio! 
-        Wir haben Ihre Angaben zu Ihrem Projekt erhalten und kümmern uns direkt darum.
+        Wir haben Ihre Angaben erhalten und kümmern uns direkt um Ihr Anliegen.
         <br /><br />
         Innerhalb der nächsten 24 Stunden meldet sich ein Berater persönlich bei Ihnen.
         </Text>
