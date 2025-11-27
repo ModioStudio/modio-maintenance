@@ -55,7 +55,6 @@ export default function PricingPage() {
               "API-Integration & Automatisierung",
               "Performance & Skalierung für hohe Nutzerzahlen",
               "Multi-Device & plattformübergreifend",
-              "DSGVO-konform & sicher",
               "Und viel mehr...",
             ],
             btn: "Enterprise anfragen",
@@ -130,7 +129,7 @@ export default function PricingPage() {
           {pricing.map((tier) => (
             <Card
               key={tier.title}
-              className="relative flex flex-col border bg-[#f5f4f2] p-8 rounded-xl shadow-xl h-[620px]"
+              className="relative flex flex-col border bg-[#f5f4f2] p-8 rounded-xl shadow-xl md:h-[670px] sm:h-[650px] h-auto"
             >
               <div className="absolute -top-7 left-6 bg-[#FF9D00]/40 border-1 border-[#FF9D00] px-4 py-2 rounded-lg shadow-md flex items-center gap-2">
                 {tier.icon}
