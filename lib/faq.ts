@@ -9,7 +9,7 @@ const TEXT = {
       name: "Ihr Name",
       email: "Ihre E-Mail",
       message: "Ihre Nachricht",
-      button: "Anfrage senden",
+      button: "Ihr Projekt starten",
       sending: "Senden…",
       success: "Vielen Dank! Wir melden uns bald.",
       error: "Hoppla, etwas ist schiefgelaufen. Bitte versuche es erneut.",
@@ -34,23 +34,23 @@ const TEXT = {
         { q: "Bietet ihr Support nach Launch?", a: "Ja, wir haben optionale Supportpakete." },
       ] 
     },
-    { 
-        id: "abo", 
-        title: "Abo", 
-        faqs: [
-        { 
-            q: "Wie funktioniert das Starter Abo?", 
-            a: "Das Starter Abo umfasst monatlich 4 Social Media Posts und 1–2 kleine Anpassungen an Ihrer Website."
-        },
-        { 
-            q: "Was bietet das Business Plus Abo?", 
-            a: "Das Business Plus Abo umfasst alle Leistungen des Business Abos plus 6–10 Änderungen pro Monat, Analytics & Performance Checks sowie Funnel-Optimierung."
+ { 
+      id: "packages", 
+      title: "Pakete & Extras", 
+      faqs: [
+        {
+          q: "Kann ich zusätzliche Features buchen?",
+          a: "Ja, für Business und Starter Pakete können Sie optional CMS oder Branding Integration hinzufügen."
         },
         {
-        q: "Kann ich mein Abo jederzeit kündigen?",
-        a: "Nein, alle Abos sind an eine Mindestlaufzeit von einem Jahr gebunden und jährlich kündbar."
-        }
-        ] 
+          q: "Wie lange dauert die Umsetzung?",
+          a: "Starter: ca. 7–10 Tage | Business: ca. 2–3 Wochen | Enterprise: individuell nach Projektumfang."
+        },
+        {
+          q: "Kann ich nachträglich ein Upgrade auf ein höheres Paket machen?",
+          a: "Ja, Sie können jederzeit ein Upgrade buchen, inklusive Anpassungen und Add-ons."
+        },
+      ]
     },
   ],
   packages: ["Starter", "Business", "Enterprise"]

@@ -15,7 +15,6 @@ export default function LandingPage() {
       <Hero />
       <WorkFlow />
       <Pricing />
-      <Modules />
       <FAQ />
       <Footer />
     </div>

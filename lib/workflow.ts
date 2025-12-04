@@ -22,7 +22,7 @@ const TEXT = {
     description: "Wir möchten Sie und Ihre Wünsche kennenlernen.",
     messageTitle: "Ihre Anforderungen",
     messageBody:
-      "Teilen Sie uns Ihre Wünsche, Ziele und Inhalte mit, wir erledigen den Rest.",
+      "Sie müssen nur Ihre Ziele mitteilen, wir erledigen den Rest",
   },
 
   handoverBox: {

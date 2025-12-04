@@ -5,111 +5,60 @@ import { Card } from "@/app/components/ui/card";
 export default function PricingPage() {
   const [mode, setMode] = useState<"one-time" | "subscription">("one-time");
 
-  const pricing =
-    mode === "one-time"
-      ? [
-          {
-            title: "Starter",
-            icon: <Home className="w-5 h-5 text-[#FF9D00]" />,
-            description:
-              "Schnelle Template-Website für Einsteiger & sofort einsatzbereit.",
-            price: "890 €",
-            features: [
-              "Vorlage / Template Design",
-              "Bis zu 5 Seiten",
-              "Mobile First Design",
-              "Auf ihr Branding angepasst",
-              "Module zubuchbar",
-            ],
-            btn: "Jetzt Starten",
-            btnClass:
-              "bg-transparent border border-black text-[#0a0a0a] hover:bg-foreground/90 hover:text-[#fbfbfb]",
-          },
-          {
-            title: "Business",
-            icon: <Briefcase className="w-5 h-5 text-[#FF9D00]" />,
-            description:
-              "Individuelle Landingpages & CMS, perfekt für wachsende Unternehmen.",
-            price: "1.600 €",
-            features: [
-              "Social-Media Integration",
-              "Kontakt-Formular",
-              "Content-Management-System",
-              "Maßgeschneidertes Design, das zur Marke passt",
-              "Intuitive Navigation & Nutzerführung",
-              "SEO-optimiert für Google & Co.",
-              "Schnellere Ladezeiten",
-            ],
-            btn: "Business sichern",
-            btnClass: "bg-foreground text-background hover:bg-foreground/90",
-          },
-          {
-            title: "Enterprise",
-            icon: <Building2 className="w-5 h-5 text-[#FF9D00]" />,
-            description:
-              "Maßgeschneiderte SaaS/MVP-Lösungen oder komplexe Web-Projekte.",
-            price: "3.500 €",
-            features: [
-              "High-End Design & Full-Service",
-              "Komplexe Features & Backend-Lösungen",
-              "API-Integration & Automatisierung",
-              "Performance & Skalierung für hohe Nutzerzahlen",
-              "Multi-Device & plattformübergreifend",
-              "Und viel mehr...",
-            ],
-            btn: "Enterprise anfragen",
-            btnClass:
-              "bg-transparent border border-black text-[#0a0a0a] hover:bg-foreground/90 hover:text-[#fbfbfb]",
-          },
-        ]
-      : [
-          {
-            title: "Starter Abo",
-            icon: <Home className="w-5 h-5 text-[#FF9D00]" />,
-            description:
-              "Minimaler Aufwand: Social Media Posts & kleine Anpassungen.",
-            price: "104 € / Monat",
-            features: [
-              "4 Social Media Posts",
-              "1–2 kleine Anpassungen",
-              "Hosting inklusiv",
-            ],
-            btn: "Jetzt Abo starten",
-            btnClass:
-              "bg-transparent border border-black text-[#0a0a0a] hover:bg-foreground/90 hover:text-[#fbfbfb]",
-          },
-          {
-            title: "Business Abo",
-            icon: <Briefcase className="w-5 h-5 text-[#FF9D00]" />,
-            description:
-              "Social Media + Offline/Printdesigns, kleine Anpassungen inklusive.",
-            price: "154 € / Monat",
-            features: [
-              "4 Offline Designs / Printmaterialien",
-              "8 Social Media Posts",
-              "Kleine Anpassungen",
-              "Hosting inklusiv",
-            ],
-            btn: "Business Abo starten",
-            btnClass: "bg-foreground text-background hover:bg-foreground/90",
-          },
-          {
-            title: "Business Plus Abo",
-            icon: <Building2 className="w-5 h-5 text-[#FF9D00]" />,
-            description:
-              "Branding inklusive, volle Betreuung, Analytics & Performance.",
-            price: "284 € / Monat",
-            features: [
-              "Alles aus Business",
-              "6–10 Changes / Monat",
-              "Analytics & Performance Check",
-              "Funnel-Optimierung",
-              "Hosting inklusiv",
-            ],
-            btn: "Business Plus Abo starten",
-            btnClass: "bg-foreground text-background hover:bg-foreground/90",
-          },
-        ];
+const pricing = [
+  {
+    title: "Starter",
+    icon: <Home className="w-5 h-5 text-[#FF9D00]" />,
+    description:
+      "Schnell einsatzbereit, perfekt für Einsteiger",
+    price: "890 €",
+    features: [
+      "Vorlage / Template Design",
+      "1–3 Seiten",
+      "Mobile First & responsive",
+      "Basis SEO / Meta-Tags",
+      "1 Revision inklusive, schnelle Umsetzung",
+    ],
+    btn: "Jetzt anfragen",
+    btnClass:
+      "bg-transparent border border-black text-[#0a0a0a] hover:bg-foreground/90 hover:text-[#fbfbfb]",
+  },
+  {
+    title: "Business",
+    icon: <Briefcase className="w-5 h-5 text-[#FF9D00]" />,
+    description:
+    "Professionell & markenkonform für wachsende Unternehmen.",
+    price: "1.600 €",
+    features: [
+        "Individuelles Design für 5–8 Seiten",
+        "Responsive & Mobile-First Layouts",
+        "Kontaktformular & Social-Media-Integration",
+        "SEO-Basics inkl. Google My Business",
+        "2–3 Revisionen inklusive",
+    ],
+    btn: "Jetzt anfragen",
+    btnClass: "bg-foreground text-background hover:bg-foreground/90",
+  },
+  {
+    title: "Enterprise",
+    icon: <Building2 className="w-5 h-5 text-[#FF9D00]" />,
+    description:
+      "Rundum-Paket für Unternehmen, die im Web glänzen wollen.",
+    price: "3.500 €",
+    features: [
+        "Individuelles Premium-Design & Branding Integration",
+        "CMS für Blog / Content-Management",
+        "10+ Seiten oder komplexe Layouts",
+        "SEO-Strategie inkl. Keyword-Analyse",
+        "Vollständige Beratung & Projekt-Roadmap",
+        "Optional: API-Integration & WebApp-Funktionen",
+    ],
+    btn: "Jetzt anfragen",
+    btnClass:
+      "bg-transparent border border-black text-[#0a0a0a] hover:bg-foreground/90 hover:text-[#fbfbfb]",
+  },
+];
+
 
   return (
     <div className="relative min-h-screen px-4 py-16 sm:px-6 lg:px-8 bg-[#fafaf9]">
@@ -142,16 +91,11 @@ export default function PricingPage() {
               </p>
               <div className="mb-4">
                 <p className="text-sm text-muted-foreground">
-                  Startet ab:{" "}
+                 ab:{" "}
                   <span className="text-lg font-medium text-foreground">
                     {tier.price}
                   </span>
                 </p>
-                {mode === "subscription" && (
-                  <span className="text-xs text-muted-foreground mt-1">
-                    Jährlich kündbar
-                  </span>
-                )}
               </div>
               <ul className="mb-8 flex-1 space-y-3 border-t border-foreground/10 pt-6 text-sm">
                 {tier.features.map((feature, i) => (
@@ -171,21 +115,6 @@ export default function PricingPage() {
         </div>
 
         <div className="mt-12 flex md:flex-row flex-col mx-auto justify-center items-center gap-3">
-          <p className="text-center text-sm md:text-base mb-1 text-muted-foreground user-select-none pointer-none:">
-            Lieber im Abo? Sieh dir die monatlichen Optionen an.
-          </p>
-          <div
-            className="relative w-20 h-8 bg-[#FF9D00]/20 rounded-full cursor-pointer"
-            onClick={() =>
-              setMode(mode === "one-time" ? "subscription" : "one-time")
-            }
-          >
-            <div
-              className={`absolute top-1 left-1 w-6 h-6 bg-[#FF9D00] rounded-full shadow-md transform transition-transform duration-300 ${
-                mode === "subscription" ? "translate-x-12" : "translate-x-0"
-              }`}
-            />
-          </div>
         </div>
       </div>
 
